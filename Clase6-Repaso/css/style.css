@@ -1,0 +1,34 @@
+*{
+    
+    padding: 0;
+    margin: 0;
+
+}
+
+.encabezado{
+
+    border: 2px red solid; /*poner un borde, su grosor y color.*/
+    /*Responsives: se adaptan al tamaño de la pantalla*/
+    width: 50%; /*cambiar pixeles a % de pantalla. */
+    text-align: center;/*mover texto al centro.*/
+    margin-left: 25%; /*mover al centro de la página. */
+    padding-top: 1.5%; /*aumentar la altura entre borde y texto.*/
+    padding-bottom: 1.5%; /*aumenta entre el borde y el texto.*/
+    font-size: 2vw;/*modificar tamaño de letra, cambiamos px por vw.*/
+        
+}
+
+/*Trabajar con imagenes para que sean responsive.
+-Meter imagenes en el Div.*/
+
+.logo img{
+    width: 100%; /*Aplicamos 100% de la imagen sea el div.*/
+}
+
+.logo{
+    width: 30%;/*Damos a la clase la anchura.*/
+    margin-left: 35%; /*Movemos al centro.*/
+    /*Si marcamos que ocupa el 30% la imagen, el resto es 70%
+    por lo que para ponerlo a la mitad ponemos distancia de 35% de
+    margenes.*/
+}
