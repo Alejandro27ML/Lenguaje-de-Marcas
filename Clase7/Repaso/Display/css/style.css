@@ -1,0 +1,29 @@
+/*
+Apuntes
+-block(defecto): todo el ancho disponible. Inicia en linea nueva.
+-inline: No inicia linea nueva. Se ocupa su contenido. No acepta ancho ni alto.
+-inlineblock: Como inline pero permite ancho y alto.
+-none: Oculta completamente el elemento.
+-flex: Contenedor flexible.
+-grid: Contenedor en forma de cuadrícula.
+
+*/
+
+.block{
+    display: block;
+    margin-bottom: 10px;
+    background-color: aquamarine;
+}
+
+.Inline{
+    display: inline;
+    background-color: lightgreen;
+
+}
+
+.inline-block{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background: lightcoral;
+}

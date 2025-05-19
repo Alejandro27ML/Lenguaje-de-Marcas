@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* % */
+
+div{
+    width: 50%;
+    padding: 10%;
+}
+
+/* rem -> root em (1 rem = 16px)
+
+-Tamaños de fuentes.
+-Espaciado.
+-Evitar herencia indeseada.
+
+*/
+
+html{
+    font-size: 16px;
+}
+
+p{
+    font-size: 1,5rem; /* 1.5 x 16px */
+}
+
+/*Unidad em -> Relative to Parent.
+toma la medida del ultimo, en este caso del div.
+*/
+
+div{
+    font-size: 20px;
+}
+
+p{
+    font-size: 1.5em; /* 1,5 x 16px = 24px */
+}
+
+.texto{
+    font-size: 1.5em; /* 1,5 x 24px = 36px */
+}
