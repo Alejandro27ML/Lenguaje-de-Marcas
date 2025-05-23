@@ -1,0 +1,61 @@
+header{
+    display: block;
+    background-color: rgb(38, 190, 182);
+    color: whitesmoke;
+    text-align: center;
+}
+
+body{
+    background-color: gainsboro;
+}
+
+footer{
+    display: block;
+    margin-bottom: 10px;
+    background-color: rgb(38, 190, 182);
+    color: whitesmoke;
+    text-align: center;
+}
+
+.menu{
+    display: inline-block;
+}
+
+article{
+    background-color: aquamarine;
+    width: 90%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+    border: 2px aquamarine; 
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contenido{
+    display: inline-block;
+    text-align: center;
+}
+
+.acerca{
+    display: inline-block;
+    background-color: rgb(236, 236, 185);
+}
+
+@media screen and (min-width: 1024px) {
+
+    article{
+        width: 30%;
+        display: block;   
+    }
+    
+}
+
+@media screen and (min-width: 600px) {
+
+    article{
+        width: 45%;
+        display: block;
+    }
+    
+}
