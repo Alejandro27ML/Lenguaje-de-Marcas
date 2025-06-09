@@ -1,0 +1,38 @@
+.cookie-popup{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px;
+    display: none;
+    justify-content: space-between;
+     /*(arriba)Es sirve con display flex coloca los elementos fijos semapados al máximo entre si*/
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    /*(arriba) centra el contenedor horizontalmente conbinado con max width, max left, etc*/
+    z-index: 1000;
+    /*(arriba) Aseguramos que el popup aparezca encima de otros elementos.*/
+}
+
+.cookie-popup.show{
+    display: flex;
+}
+
+.cookie-popup button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    /*El cursor modifica el cursor al ponerse encima.*/
+
+}
+
+.cookie-popup a{
+    color: #007bff;
+    text-decoration: underline;
+}
