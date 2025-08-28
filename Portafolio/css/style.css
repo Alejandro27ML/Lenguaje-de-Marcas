@@ -155,8 +155,13 @@ main{
 /* Contenidos */
 
 @font-face {
-    font-family: 'Personalizado';
+    font-family: 'fuente1';
     src: url('../font/BellavoirSerif_PERSONAL_USE_ONLY.otf');
+}
+
+@font-face {
+    font-family: 'fuente2';
+    src: url('../font/Louis\ George\ Cafe.ttf');
 }
 
 .espacio{
@@ -165,7 +170,7 @@ main{
 
 
 .leyenda{
-    font-family: 'Personalizado',sans-serif;
+    font-family: 'fuente1',sans-serif;
     color:azure;
     font-size: 200%;
     padding: 1em;
@@ -176,7 +181,7 @@ p{
     font-size: 160%;
     margin: 3%;
     padding: 3%;
-    font-family: 'Century Gothic',sans-serif;
+    font-family: 'fuente2',sans-serif;
     line-height: 200%;
     text-align: justify;
 }
@@ -203,6 +208,10 @@ p{
   .contenido {
     flex-direction: column;
   }
+}
+
+footer{
+   margin-left: 35%;
 }
 
 /*Cookies*/
@@ -239,5 +248,9 @@ p{
 .cookie-popup a{
     color: #007bff;
     text-decoration: underline;
+}
+
+.parrafo-cookies{
+  font-size: 100%;
 }
 
