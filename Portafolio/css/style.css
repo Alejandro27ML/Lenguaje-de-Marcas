@@ -164,16 +164,13 @@ main{
     src: url('../font/Louis\ George\ Cafe.ttf');
 }
 
-.espacio{
-    color: lightgray;
-}
-
-
 .leyenda{
     font-family: 'fuente1',sans-serif;
+    font-weight: bold;
+    background-color: rgb(84, 176, 230);
     color:azure;
     font-size: 200%;
-    padding: 1em;
+    padding: 0,5em;
     text-shadow: 2px 2px 8px #000;
 }
 
@@ -186,22 +183,18 @@ p{
     text-align: justify;
 }
 
-#proyectos, #contacto{
-    background-color:lemonchiffon;
-}
-
-#curriculum, #intereses{
-    background-color: mediumaquamarine;
-}
-
 .contenido {
   display: flex;
   gap: 20px;
+  background-color: rgb(169, 249, 222);
 }
 
 .bloque {
   flex: 1;
   padding: 20px;
+  border: 2px solid rgb(84, 176, 230);     
+  padding: 10px;             
+  margin: 20px 0;             
 }
 
 @media (max-width: 768px) { /* como me estoy liando, he decidido separar las Media Queries para cada sección. */
@@ -212,6 +205,20 @@ p{
 
 footer{
    margin-left: 35%;
+}
+
+.arriba{
+    background-color:#1057a3;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 40px;
+    border: solid;
+    color: white;
+    text-align: center;
 }
 
 /*Cookies*/
