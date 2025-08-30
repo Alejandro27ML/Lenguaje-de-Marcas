@@ -81,8 +81,7 @@ nav{
     background-color: #4ab3b6;
     color: #fff;
     position: relative;
-    display: block;
-    
+    display: block;    
 }
 
 
@@ -204,7 +203,10 @@ p{
 }
 
 footer{
-   margin-left: 35%;
+  background: #eae9f0;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  text-align: center;
 }
 
 .arriba{
