@@ -33,7 +33,7 @@
   padding: 20px;
 }
 
-@media (max-width: 768px) { /* como me estoy liando, he decidido separar las Media Queries para cada sección. */
+@media (max-width: 768px) { /* Para no liarme con las Media Queries, las he separado por cada sección */
   .contenedor {
     flex-direction: column; 
     height: auto; 
@@ -118,7 +118,7 @@ nav{
     color: #fff;    
 }
 
-@media screen and (max-width: 768px){ /* como me estoy liando, he decidido separar las Media Queries para cada sección. */
+@media screen and (max-width: 768px){ /* Para no liarme con las Media Queries, las he separado por cada sección */
     .boton-menu{
         display: block;
     }
@@ -163,6 +163,18 @@ main{
     src: url('../font/Louis\ George\ Cafe.ttf');
 }
 
+.img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .leyenda{
     font-family: 'fuente1',sans-serif;
     font-weight: bold;
@@ -196,7 +208,7 @@ p{
   margin: 20px 0;             
 }
 
-@media (max-width: 768px) { /* como me estoy liando, he decidido separar las Media Queries para cada sección. */
+@media (max-width: 768px) { /* Para no liarme con las Media Queries, las he separado por cada sección */
   .contenido {
     flex-direction: column;
   }
