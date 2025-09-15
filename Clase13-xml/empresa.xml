@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<empresa>
+    <empleado>
+        <nombre>Pepe</nombre>
+        <apellido>Ramirez</apellido>
+        <número>565656565</número>
+        <correo>ejemplo@ejemplo.com</correo>
+        <dirección>
+            <ciudad>Madrid</ciudad>
+            <estado>España</estado>
+            <zip>28045</zip>
+        </dirección>
+    </empleado>
+</empresa>
