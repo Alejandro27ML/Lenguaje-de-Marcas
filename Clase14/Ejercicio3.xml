@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE factura SYSTEM "Ejercicio3.dtd">
+
+<factura>
+    <cabecera>
+        <cliente></cliente>
+        <nif></nif>
+        <fecha></fecha>
+    </cabecera>
+
+    <lineas>
+        <linea>
+            <producto></producto>
+            <cantidad></cantidad>
+            <precioUnitario></precioUnitario>
+        </linea>
+
+        <linea>
+            <producto></producto>
+            <cantidad></cantidad>
+            <precioUnitario></precioUnitario>
+        </linea>
+    </lineas>
+
+    <totales>
+        <subtotal></subtotal>
+        <iva></iva>
+        <total></total>
+    </totales>
+</factura>

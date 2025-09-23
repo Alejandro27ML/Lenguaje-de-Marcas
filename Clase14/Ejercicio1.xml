@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE biblioteca SYSTEM "ejercicio1.dtd">
+
+<biblioteca>
+    <libro id="e1">
+        <titulo></titulo>
+        <autor></autor>
+        <año></año>
+        <genero></genero>
+    </libro>
+
+    <libro id="e2">
+        <titulo></titulo>
+        <autor></autor>
+        <año></año>
+        <genero></genero>
+    </libro>
+
+</biblioteca>

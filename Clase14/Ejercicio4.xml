@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE universidad SYSTEM "Ejercicio4.dtd">
+
+<universidad>
+    <asignaturas>
+        <asignatura id="DAM01">
+            <nombre></nombre>
+            <creditos></creditos>
+        </asignatura>
+    </asignaturas>
+    <alumnos>
+        <alumno nia= "a1001">
+            <nombre></nombre>
+        </alumno>
+    </alumnos>
+    <matriculas>
+        <matricula alumno= "a1001" asignatura="DAM01" />
+    </matriculas>
+</universidad>

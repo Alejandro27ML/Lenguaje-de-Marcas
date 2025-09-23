@@ -1,0 +1,13 @@
+    <!ELEMENT biblioteca (libro+)>
+    <!ELEMENT libro (titulo, autor+, año?, genero)>
+    <!-- Para los atriburos (como ids)
+    Primero ponemos donde está (libro)
+    identificador 
+    Cadena alfanumericas (CDATA)
+    único (id) <-
+    puede uno de estre 2 valores(valor1|valor2) -->
+    <!ATTLIST libro id ID #REQUIRED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT año (#PCDATA)>
+    <!ELEMENT genero (#PCDATA)>

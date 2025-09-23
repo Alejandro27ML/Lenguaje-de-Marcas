@@ -1,0 +1,8 @@
+    <!ELEMENT empresa (empleado+)>
+    <!ELEMENT empleado (nombre, puesto, salario)>
+    <!ATTLIST empleado id ID #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT puesto (#PCDATA)>
+    <!ELEMENT salario (#PCDATA)>
+    <!-- En este caso usamos el (valor1|valor2) -->
+    <!ATTLIST salario moneda (EUR|USD) #REQUIRED>

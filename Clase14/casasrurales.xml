@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definición de DTD.
+ dentro de casa_rurales está casa.
+ dentro de casa están descripción, dirección, etc... -->
+
+ <!-- Cardinalidad
+  ? uno o ninguno.
+  * de 0 a N.
+  + de 1 a N. -->
+ 
+<!DOCTYPE casa_rurales [
+    <!ELEMENT casa_rurales (casa+)>
+    <!ELEMENT casa (dirección, descripción?, estado, (tamaño | hectareas), disponible?)>
+    <!ELEMENT dirección (#PCDATA)>
+    <!ELEMENT descripción (#PCDATA)>
+    <!ELEMENT estado (#PCDATA)>
+    <!ELEMENT tamaño (#PCDATA)>
+    <!-- Elementos vacios -->
+    <!ELEMENT disponible EMPTY>
+    <!-- Puede ser este o otro con | -->
+     <!ELEMENT hectareas (#PCDATA)>
+]>
+<casa_rurales>
+    <casa>
+        <dirección>Avenida de los Rosales.</dirección>
+        <descripción>Casa rural con piscina.</descripción>
+        <estado>disponible</estado>
+        <tamaño>200m2</tamaño>
+        <!-- Elementos vacios -->
+        <disponible></disponible>
+    </casa>
+
+        <casa>
+        <dirección>Avenida de los Rosales.</dirección>
+        <descripción>Casa rural con piscina.</descripción>
+        <estado>disponible</estado>
+        <hectareas>1h</hectareas>
+        <!-- Elementos vacios -->
+        <disponible></disponible>
+    </casa>
+
+</casa_rurales>
