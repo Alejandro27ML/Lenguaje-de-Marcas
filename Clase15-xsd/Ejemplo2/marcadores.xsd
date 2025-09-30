@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="marcadores">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- hay que poner max occurs para indicar el máximo de repeticiones
+                min occurs si queremos variar el minimo, predeterminado es 1,1. -->
+                <xs:element name="pagina" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="descripción" type="xs:string"/>                               
+                            <xs:choice>
+                                <xs:element name="url" type="xs:string"/>
+                                <xs:element name="link" type="xs:string"/>
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
