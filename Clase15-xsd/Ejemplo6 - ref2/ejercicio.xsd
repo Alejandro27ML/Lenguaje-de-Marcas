@@ -25,8 +25,8 @@
 
     <xs:simpleType name="edadPersona">
         <xs:restriction base="xs:integer">
-            <xs:minExclusive value="-1"/>             
-            <xs:maxExclusive value="131"/>
+            <xs:minInclusive value="17"/>             
+            <xs:maxInclusive value="65"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
