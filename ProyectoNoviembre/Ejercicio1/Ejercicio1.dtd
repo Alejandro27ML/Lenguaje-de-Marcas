@@ -1,0 +1,35 @@
+<!ELEMENT catalogo (libros, revistas, usuarios, prestamos)>
+<!-- Fecha no es un identificador, lo voy a dejar como CDATA. -->
+<!ATTLIST catalogo fecha CDATA #REQUIRED>
+
+<!ELEMENT libros (libro+)>
+<!ELEMENT libro (titulo, anio, autores, etiquetas?)>
+<!-- Coloco paginas como opcional (#IMPLIED) porque en el segundo libro no aparece. -->
+<!ATTLIST libro id ID #REQUIRED categoria CDATA #REQUIRED isbn CDATA #REQUIRED paginas CDATA #IMPLIED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT autores (autor+)>
+<!ELEMENT autor (nombre, orcid?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT orcid (#PCDATA)>
+<!ELEMENT etiquetas (etiqueta+)>
+<!ELEMENT etiqueta (#PCDATA)>
+
+<!ELEMENT revistas (revista+)>
+<!ELEMENT revista (titulo, anio)>
+<!-- Al solo tener una revista para comparar, entiendo que todos los atributos son requeridos. -->
+<!ATTLIST revista id ID #REQUIRED area CDATA #REQUIRED issn CDATA #REQUIRED numero CDATA #IMPLIED>
+
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (nombre, email)>
+<!-- En tipo, al solo tener dos para comparar puede ser (alumno|profesor) voy a dejarlo como (CDATA) por si hay mas tipos. -->
+<!ATTLIST usuario id ID #REQUIRED tipo CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT prestamos (prestamo+)>
+<!ELEMENT prestamo (fecha_inicio?, fecha_fin, estado)>
+<!ATTLIST prestamo id ID #REQUIRED itemRef IDREF #REQUIRED usuarioRef IDREF #REQUIRED>
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT fecha_fin (#PCDATA)>
+<!ELEMENT estado (#PCDATA)>
