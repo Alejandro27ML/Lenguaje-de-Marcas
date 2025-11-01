@@ -21,7 +21,8 @@
 <!ATTLIST revista id ID #REQUIRED area CDATA #REQUIRED issn CDATA #REQUIRED numero CDATA #IMPLIED>
 
 <!ELEMENT usuarios (usuario+)>
-<!ELEMENT usuario (nombre, email)>
+<!-- Asumo que un usuario puede tener varios correos. -->
+<!ELEMENT usuario (nombre, email+)>
 <!-- En tipo, al solo tener dos para comparar puede ser (alumno|profesor) voy a dejarlo como (CDATA) por si hay mas tipos. -->
 <!ATTLIST usuario id ID #REQUIRED tipo CDATA #REQUIRED>
 <!ELEMENT nombre (#PCDATA)>
