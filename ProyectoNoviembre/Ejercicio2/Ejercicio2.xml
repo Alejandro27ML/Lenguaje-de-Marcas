@@ -2,7 +2,7 @@
 
 <!DOCTYPE plataforma SYSTEM "Ejercicio2.dtd">
 
-<plataforma fecha_publicacion="02/11/2025">
+<plataforma fecha_publicacion="02-11-2025">
 
     <cursos>
         <curso id="C01">
@@ -16,13 +16,14 @@
                     <horas></horas>
                 </modulo>
 
-                <modulo clave="M03">
+                <modulo>
                     <nombre></nombre>
                     <horas></horas>
                 </modulo>
             </modulos>
         </curso>
-        <curso id="C02" codigo="0121">
+
+        <curso id="C02" codigo="C0121">
             <titulo></titulo>
             <nivel></nivel>
             <modalidad></modalidad>

@@ -12,6 +12,7 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- Elementos de Libros -->
     <xs:element name="libros">
         <xs:complexType>
             <xs:sequence>
@@ -72,6 +73,7 @@
         </xs:complexType>
     </xs:element>
 
+    <!-- Elementos de Revistas -->
     <xs:element name="revistas">
         <xs:complexType>
             <xs:sequence>
@@ -99,6 +101,7 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <!-- Elementos de Usuarios -->
     <xs:element name="usuarios">
         <xs:complexType>
             <xs:sequence>
@@ -111,7 +114,6 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="nombre" type="xs:string"/>
-                <!-- Voy a asumir que puede tener varios correos -->
                 <xs:element name="email" type="tipoEmail" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:ID" use="required"/>
@@ -133,6 +135,7 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <!-- Elementos de Préstamos -->
     <xs:element name="prestamos">
         <xs:complexType>
             <xs:sequence>
