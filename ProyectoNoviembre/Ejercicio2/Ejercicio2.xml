@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plataforma SYSTEM "Ejercicio2.dtd">
+
+<plataforma fecha_publicacion="02/11/2025">
+
+    <cursos>
+        <curso id="C01">
+            <titulo></titulo>
+            <nivel></nivel>
+            <modalidad></modalidad>
+            <horas></horas>
+            <modulos>
+                <modulo clave="M01">
+                    <nombre></nombre>
+                    <horas></horas>
+                </modulo>
+
+                <modulo clave="M03">
+                    <nombre></nombre>
+                    <horas></horas>
+                </modulo>
+            </modulos>
+        </curso>
+        <curso id="C02" codigo="0121">
+            <titulo></titulo>
+            <nivel></nivel>
+            <modalidad></modalidad>
+            <horas></horas>
+        </curso>
+    </cursos>
+
+    <alumnos>
+        <alumno id="A001">
+            <nombre></nombre>
+            <email></email>
+            <telefono></telefono>
+        </alumno>
+        <alumno id="A002" nif="65687924X">
+            <nombre></nombre>
+            <email></email>
+        </alumno>
+    </alumnos>
+
+    <matriculas>
+        <matricula id="MA001" alumnoRef="A001" cursoRef="C01">
+            <fecha_alta></fecha_alta>
+            <estado></estado>
+        </matricula>
+        <matricula id="MA002" alumnoRef="A002" cursoRef="C01">
+            <fecha_alta></fecha_alta>
+            <estado></estado>
+        </matricula>
+    </matriculas>
+
+    <evaluaciones>
+        <evaluacion id="E01" matriculaRef="MA001">
+            <instrumento></instrumento>
+            <convocatoria></convocatoria>
+            <nota></nota>
+        </evaluacion>
+        <evaluacion id="E02" matriculaRef="MA002">
+            <instrumento></instrumento>
+            <convocatoria></convocatoria>
+            <nota></nota>
+        </evaluacion>
+    </evaluaciones>
+
+</plataforma>

@@ -29,11 +29,17 @@
                 <xs:element ref="etiquetas" minOccurs="0"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:ID" use="required"/> 
-            <xs:attribute name="titulo" type="xs:string" use="required"/>   
-            <xs:attribute name="isbn" type="xs:string" use="required"/>   
+            <xs:attribute name="categoria" type="xs:string" use="required"/>   
+            <xs:attribute name="isbn" type="tipoIsbn" use="required"/>   
             <xs:attribute name="paginas" type="xs:integer" use="optional"/>      
         </xs:complexType>
     </xs:element>
+    
+    <xs:simpleType name="tipoIsbn">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="97[89]\d{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:element name="autores">
         <xs:complexType>
@@ -47,10 +53,16 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="nombre" type="xs:string"></xs:element>
-                <xs:element name="orcid" minOccurs="0"></xs:element>
+                <xs:element name="orcid" type="tipoOrcid" minOccurs="0"></xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="tipoOrcid">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{4}-\d{4}-\d{3}[\dX]"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:element name="etiquetas">
         <xs:complexType>
@@ -76,10 +88,16 @@
             </xs:sequence>
             <xs:attribute name="id" type="xs:ID" use="required"/>
             <xs:attribute name="area" type="xs:string" use="required"/>
-            <xs:attribute name="issn" type="xs:string" use="required"/>
+            <xs:attribute name="issn" type="tipoIssn" use="required"/>
             <xs:attribute name="numero" type="xs:integer" use="required"/>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="tipoIssn">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{4}-\d{3}[\dX]"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:element name="usuarios">
         <xs:complexType>
@@ -94,17 +112,31 @@
             <xs:sequence>
                 <xs:element name="nombre" type="xs:string"/>
                 <!-- Voy a asumir que puede tener varios correos -->
-                <xs:element name="email" type="xs:string" maxOccurs="unbounded"/>
+                <xs:element name="email" type="tipoEmail" maxOccurs="unbounded"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:ID" use="required"/>
-            <xs:attribute name="tipo" type="xs:string" use="required"/>
+            <xs:attribute name="tipo" type="tipoTipo" use="required"/>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="tipoEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoTipo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="alumno"/>
+            <xs:enumeration value="profesor"/>
+            <xs:enumeration value="invitado"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:element name="prestamos">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="prestamo"/>
+                <xs:element ref="prestamo" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -114,12 +146,19 @@
             <xs:sequence>
                 <xs:element name="fecha_inicio" type="xs:date" minOccurs="0"/>
                 <xs:element name="fecha_fin" type="xs:date"/>
-                <xs:element name="estado" type="xs:string"/>
+                <xs:element name="estado" type="tipoEstado"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:ID" use="required"/>
             <xs:attribute name="itemRef" type="xs:IDREF" use="required"/>
             <xs:attribute name="usuarioRef" type="xs:IDREF" use="required"/>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="tipoEstado">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="devuelto"/>
+            <xs:enumeration value="en_curso"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>
