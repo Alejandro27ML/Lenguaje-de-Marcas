@@ -1,69 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE plataforma SYSTEM "Ejercicio2.dtd">
+<!-- Tengo que comentar DTD porque parece ser no compatible con uno de XSD
+ no permite validar los dos al mismo tiempo.-->
+ 
+<!-- <!DOCTYPE plataforma SYSTEM "Ejercicio2.dtd"> -->
 
-<plataforma fecha_publicacion="02-11-2025">
+<plataforma xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio2.xsd" fecha_publicacion="02-11-2025">
 
     <cursos>
         <curso id="C01">
-            <titulo></titulo>
-            <nivel></nivel>
-            <modalidad></modalidad>
-            <horas></horas>
+            <titulo>Desarrollador de aplicaciones Multiplataforma</titulo>
+            <nivel>Ciclo Superior</nivel>
+            <modalidad>Presencial</modalidad>
+            <horas>2000</horas>
             <modulos>
                 <modulo clave="M01">
-                    <nombre></nombre>
-                    <horas></horas>
+                    <nombre>Programación</nombre>
+                    <horas>256</horas>
                 </modulo>
 
                 <modulo>
-                    <nombre></nombre>
-                    <horas></horas>
+                    <nombre>Sistemas Informáticos</nombre>
+                    <horas>160</horas>
                 </modulo>
             </modulos>
         </curso>
 
         <curso id="C02" codigo="C0121">
-            <titulo></titulo>
-            <nivel></nivel>
-            <modalidad></modalidad>
-            <horas></horas>
+            <titulo>Desarrollador de aplicaciones Web</titulo>
+            <nivel>Ciclo Superior</nivel>
+            <modalidad>Online</modalidad>
+            <horas>1200</horas>
         </curso>
     </cursos>
 
     <alumnos>
         <alumno id="A001">
-            <nombre></nombre>
-            <email></email>
-            <telefono></telefono>
+            <nombre>Juan Fernandez</nombre>
+            <email>juan_fernandez@alumnos.com</email>
+            <telefono>686345621</telefono>
         </alumno>
         <alumno id="A002" nif="65687924X">
-            <nombre></nombre>
-            <email></email>
+            <nombre>Maria Rodreiguez</nombre>
+            <email>maria_rod@alumnos.com</email>
         </alumno>
     </alumnos>
 
     <matriculas>
         <matricula id="MA001" alumnoRef="A001" cursoRef="C01">
-            <fecha_alta></fecha_alta>
-            <estado></estado>
+            <fecha_alta>02-10-2024</fecha_alta>
+            <estado>activa</estado>
         </matricula>
         <matricula id="MA002" alumnoRef="A002" cursoRef="C01">
-            <fecha_alta></fecha_alta>
-            <estado></estado>
+            <fecha_alta>05-10-2024</fecha_alta>
+            <estado>activa</estado>
         </matricula>
     </matriculas>
 
     <evaluaciones>
         <evaluacion id="E01" matriculaRef="MA001">
             <instrumento></instrumento>
-            <convocatoria></convocatoria>
-            <nota></nota>
+            <convocatoria>1</convocatoria>
+            <nota>7.5</nota>
         </evaluacion>
         <evaluacion id="E02" matriculaRef="MA002">
             <instrumento></instrumento>
-            <convocatoria></convocatoria>
-            <nota></nota>
+            <convocatoria>2</convocatoria>
+            <nota>8.0</nota>
         </evaluacion>
     </evaluaciones>
 
