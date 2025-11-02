@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio3.xsd">
+    <book>
+        <title>The Way of Kings</title>
+        <author>Brandon Sanderson</author>
+        <year>2010</year>
+        <publisher>Tor Books</publisher>
+        <pages>1198</pages>
+    </book>
+
+    <book>
+        <title>The Eye of the World</title>
+        <author>Robert Jordan</author>
+        <year>1990</year>
+        <publisher>Tor Books</publisher>
+        <pages>782</pages>
+    </book>
+</library>
