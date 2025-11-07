@@ -1,10 +1,8 @@
 <!ELEMENT catalogo (libros, revistas, usuarios, prestamos)>
-<!-- Fecha no es un identificador, lo voy a dejar como CDATA. -->
 <!ATTLIST catalogo fecha CDATA #REQUIRED>
 
 <!ELEMENT libros (libro+)>
 <!ELEMENT libro (titulo, anio, autores, etiquetas?)>
-<!-- Coloco paginas como opcional (#IMPLIED) porque en el segundo libro no aparece. -->
 <!ATTLIST libro id ID #REQUIRED categoria CDATA #REQUIRED isbn CDATA #REQUIRED paginas CDATA #IMPLIED>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT anio (#PCDATA)>
@@ -17,7 +15,6 @@
 
 <!ELEMENT revistas (revista+)>
 <!ELEMENT revista (titulo, anio)>
-<!-- Al solo tener una revista para comparar, entiendo que todos los atributos son requeridos. -->
 <!ATTLIST revista id ID #REQUIRED area CDATA #REQUIRED issn CDATA #REQUIRED numero CDATA #IMPLIED>
 
 <!ELEMENT usuarios (usuario+)>

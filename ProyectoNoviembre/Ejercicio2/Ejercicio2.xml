@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Tengo que comentar DTD porque parece ser no compatible con uno de XSD
- no permite validar los dos al mismo tiempo.-->
- 
+<!-- Este código en comentario sería para validar el DTD, está comentado ya que no permite validar DTD y XSD. --> 
 <!-- <!DOCTYPE plataforma SYSTEM "Ejercicio2.dtd"> -->
 
 <plataforma xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio2.xsd" fecha_publicacion="02-11-2025">
